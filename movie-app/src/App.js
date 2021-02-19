@@ -1,8 +1,28 @@
 import './App.css';
 import React, { Component } from 'react';
+import axios from 'axios';
 
+//api key 38e29c7e
 
 class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      movieData:[]
+    }
+  }
+
+  componentDidMount=async ()=>{
+    const movieData1=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=top+gun")
+    const movieData2=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=blade+runner")
+    const movieData3=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=blazing+saddles")
+    const movieData4=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=inception")
+    const movieData5=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=caddyshack")
+
+  
+    console.log(movieData5)    
+  }
+  
 
   render(){
   return (
