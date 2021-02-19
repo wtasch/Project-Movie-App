@@ -1,0 +1,32 @@
+Friday
+
+    Decide on application 
+    develop rough sc
+    decide on weekend work and time
+
+Monday
+
+    meeting to discuss
+        dom
+        features
+        divide  up work
+
+    Complete API data pull    
+        Meet to review API data
+
+    Complete route code
+
+    Meet later into day to merge code
+
+Tuesday            
+    meeting to decide what to work on 
+
+    start on CSS
+
+weds    
+    complete coded
+    finalize CSS
+
+ thursday
+    readME
+    deploy   
