@@ -4,6 +4,9 @@ import './App.css';
 
 import axios from 'axios';
 
+import MovieList from './component/MovieList';
+import MovieDetail from './component/MovieDetail';
+
 //api key 38e29c7e
 
 class App extends Component{
@@ -42,6 +45,8 @@ class App extends Component{
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
+          <MovieList movieData={this.state.movieData} />
+          <MovieDetail movieData={this.state.movieData} />
           <p>Data Loaded</p>
         </div>
         : <p>data not loaded</p>
