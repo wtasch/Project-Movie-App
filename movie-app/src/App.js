@@ -4,8 +4,10 @@ import './App.css';
 
 import axios from 'axios';
 
+import Header from './component/Header';
 import MovieList from './component/MovieList';
 import MovieDetail from './component/MovieDetail';
+import Footer from './component/Footer';
 
 //api key 38e29c7e
 
@@ -45,8 +47,10 @@ class App extends Component{
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
+          <Header />
           <MovieList movieData={this.state.movieData} />
           <MovieDetail movieData={this.state.movieData} />
+          <Footer />
           <p>Data Loaded</p>
         </div>
         : <p>data not loaded</p>

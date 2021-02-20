@@ -1,6 +1,7 @@
 import React from 'react';
 
-const MovieList = () => {
+const MovieList = (props) => {
+  console.log(props.movieData);
   return (
     <h1>This is the MovieList</h1>
   )
