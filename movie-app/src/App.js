@@ -1,5 +1,7 @@
-import './App.css';
 import React, { Component } from 'react';
+
+import './App.css';
+
 import axios from 'axios';
 
 //api key 38e29c7e
@@ -18,9 +20,17 @@ class App extends Component{
     const movieData3=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=blazing+saddles")
     const movieData4=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=inception")
     const movieData5=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=caddyshack")
+    
+    console.log(movieData5);
 
-  
-    console.log(movieData5)    
+    const movieData = [
+      movieData1.data,
+      movieData2.data,
+      movieData3.data,
+      movieData4.data,
+      movieData5.data,
+    ]
+    console.log(movieData);
   }
   
 
