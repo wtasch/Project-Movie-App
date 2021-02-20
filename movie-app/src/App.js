@@ -28,8 +28,8 @@ class App extends Component{
       movieData3.data,
       movieData4.data,
       movieData5.data,
-    ]
-    //console.log(movieData);
+    ];
+    console.log(movieData);
     this.setState ({
       movieData: movieData,
       apiDataLoaded: true
@@ -39,8 +39,13 @@ class App extends Component{
 
   render(){
   return (
-    <div className="App">
-      Testing
+    <div>
+      {this.state.apiDataLoaded ?  
+        <div className="App">
+          <p>Data Loaded</p>
+        </div>
+        : <p>data not loaded</p>
+      }
     </div>
   );
 }
