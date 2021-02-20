@@ -46,8 +46,11 @@ class App extends Component{
       {this.state.apiDataLoaded ?  
         <div className="App">
           <Header />
+
           <Link to="/">MovieList Page</Link>
-          <Link to="/MovieDetails">Movie Details Page</Link>
+          <Link to="/Login"/>
+          {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
+          {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
 
           <Switch>
           <Route exact path="/" render={()=>(
@@ -57,6 +60,10 @@ class App extends Component{
           <Route exact path="/MovieDetails/:id" render={(routerProps)=>(        
           <MovieDetail movieData={this.state.movieData} />
           )}/>
+
+          {/* line below will be used when login functionality is created */}
+          {/* <Route exact path="/Login" component={Login}/> */}
+          
           </Switch>
 
           <Footer />
