@@ -10,7 +10,8 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={
-      movieData:[]
+      movieData:[],
+      apiDataLoaded: false
     }
   }
 
@@ -21,8 +22,6 @@ class App extends Component{
     const movieData4=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=inception")
     const movieData5=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=caddyshack")
     
-    console.log(movieData5);
-
     const movieData = [
       movieData1.data,
       movieData2.data,
@@ -30,7 +29,11 @@ class App extends Component{
       movieData4.data,
       movieData5.data,
     ]
-    console.log(movieData);
+    //console.log(movieData);
+    this.setState ({
+      movieData: movieData,
+      apiDataLoaded: true
+    })
   }
   
 
