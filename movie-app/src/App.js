@@ -47,7 +47,8 @@ class App extends Component{
         <div className="App">
           <Header />
 
-          <Link to="/">MovieList Page</Link>
+          
+          <Link to="/">MovieList Page</Link>    
           <Link to="/Login"/>
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
