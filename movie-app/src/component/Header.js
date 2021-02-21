@@ -30,8 +30,10 @@ const Header = (props) => {
     <div>
             <p> from Header, need approval from team for this element</p>
             {props.movieData.map(movieData => (
-          <div>
-            <h3>{movieData.title}  </h3>
+          <div className="headerPoster">
+            
+            <img className="headerPost" scr="{movieData.Poster}"></img>
+            <h3>{movieData.Title}  </h3>
           </div>
 
           ))}
