@@ -57,8 +57,9 @@ class App extends Component{
               <MovieList movieData={this.state.movieData} />
           )}/>
 
-          <Route exact path="/MovieDetails/:id" render={(routerProps)=>(        
-          <MovieDetail movieData={this.state.movieData} />
+          <Route exact path="/MovieDetail/:Title" render={(routerProps)=>(        
+          <MovieDetail movieData={this.state.movieData} 
+          {...routerProps}/>
           )}/>
 
           {/* line below will be used when login functionality is created */}
