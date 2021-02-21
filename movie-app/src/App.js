@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-
 import './App.css';
-
 import axios from 'axios';
-
 import Header from './component/Header';
 import MovieList from './component/MovieList';
 import MovieDetail from './component/MovieDetail';
 import Footer from './component/Footer';
+import {Route, Link, Switch} from 'react-router-dom';
 
 //api key 38e29c7e
 
@@ -47,8 +45,8 @@ class App extends Component{
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
-          <Header  movieData={this.state.movieData} />
-      
+        <Header  movieData={this.state.movieData} />
+       
 
           <Link to="/">MovieList Page</Link>
           <Link to="/Login"/>
@@ -67,7 +65,10 @@ class App extends Component{
           {/* line below will be used when login functionality is created */}
           {/* <Route exact path="/Login" component={Login}/> */}
           
+       
+
           <Footer />
+
           <p>Data Loaded</p>
         </div>
         : <p>data not loaded</p>
