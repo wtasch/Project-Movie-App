@@ -21,21 +21,21 @@ class Login extends Component{
     render(){
         return(        
             <form className="Login-Form">
-                <label htmlFor="username">username</label>
-                <input 
+                <label className="Login-Label" htmlFor="username">username</label>
+                <input className="Login-Input"
                     type="text"
                     name="username"
                     value={this.state.username}
                     onChange={this.handleChange}
                 />
-                  <label htmlFor="password">Password</label>
-                <input
+                  <label className="Login-Label" htmlFor="password">Password</label>
+                <input className="Login-Input"
                     type="password"
                     name="password"
                     value={this.state.password}
                     onChange={this.handleChange}
                 />
-                <input type="submit" value="Login!"/>
+                <input className="Login-Submit" type="submit" value="Login!"/>
             </form>
         )
     }
