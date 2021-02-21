@@ -1,9 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieList = (props) => {
-  console.log(props.movieData);
   return (
-    <h1>This is the MovieList</h1>
+    <div> 
+      <h1>Movies!!.......</h1>
+      {props.movieData.map(movie => (
+        <div key={movie.imdbID}>
+          <h3>
+            <Link to={`/MovieDetail/${movie.Title}`}>{movie.Title}</Link>
+          </h3>
+        </div>
+      ))}
+    </div>
   )
 }
 
