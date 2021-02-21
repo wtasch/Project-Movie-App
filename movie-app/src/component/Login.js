@@ -11,17 +11,16 @@ class Login extends Component{
 
     handleChange=(e)=>{
         console.log(e.target)
-        const {username,password};
+        const {name,value}=e.target;
         this.setState({
             
-            [username]:value,
-            [password]:value
+            [name]:value
         })
     }
 
     render(){
         return(        
-            <form>
+            <form className="Login-Form">
                 <label htmlFor="username">username</label>
                 <input 
                     type="text"
@@ -30,7 +29,7 @@ class Login extends Component{
                     onChange={this.handleChange}
                 />
                   <label htmlFor="password">Password</label>
-                <textarea
+                <input
                     type="password"
                     name="password"
                     value={this.state.password}

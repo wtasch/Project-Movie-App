@@ -6,6 +6,7 @@ import MovieList from './component/MovieList';
 import MovieDetail from './component/MovieDetail';
 import Footer from './component/Footer';
 import {Route, Link, Switch} from 'react-router-dom';
+import Login from './component/Login'
 
 //api key 38e29c7e
 
@@ -49,7 +50,8 @@ class App extends Component{
 
           
           <Link to="/">MovieList Page</Link>    
-          <Link to="/Login"/>
+          <Link to="/Login">Login</Link>
+
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
 
@@ -61,6 +63,11 @@ class App extends Component{
           <Route exact path="/MovieDetails/:id" render={(routerProps)=>(        
           <MovieDetail movieData={this.state.movieData} />
           )}/>
+
+          <Route exact path="/Login" render={(routerProps)=>(        
+          <Login Component={Login}/>
+          )}/>
+
 
           {/* line below will be used when login functionality is created */}
           {/* <Route exact path="/Login" component={Login}/> */}
