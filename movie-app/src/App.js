@@ -45,7 +45,8 @@ class App extends Component{
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
-          <Header />
+        <Header  movieData={this.state.movieData} />
+       
 
           <Link to="/">MovieList Page</Link>
           <Link to="/Login"/>
