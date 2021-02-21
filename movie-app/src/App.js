@@ -42,6 +42,7 @@ class App extends Component{
   
 
   render(){
+    console.log(this.state.movieData.Title)
   return (
     <div>
       {this.state.apiDataLoaded ?  
@@ -56,12 +57,13 @@ class App extends Component{
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
 
           <Switch>
-          <Route exact path="/" render={()=>(
-              <MovieList movieData={this.state.movieData} />
+          <Route exact path="/" render={(routerProps)=>(
+              <MovieList movieData={this.state.movieData} {...routerProps}/>
           )}/>
 
-          <Route exact path="/MovieDetails/:id" render={(routerProps)=>(        
-          <MovieDetail movieData={this.state.movieData} />
+          <Route exact path="/MovieDetails/:Title" render={(routerProps)=>(        
+          <MovieDetail movieData={this.state.movieData}
+          {...routerProps} />
           )}/>
 
           <Route exact path="/Login" render={(routerProps)=>(        
