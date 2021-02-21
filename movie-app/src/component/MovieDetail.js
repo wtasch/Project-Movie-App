@@ -9,7 +9,7 @@ const MovieDetail = (props) => {
       <div className = "summary">
         {foundMovie ? (
           <div>
-            <div>
+            <div className="plot">
               <h2>{foundMovie.Title}</h2>
               <h3>Summary</h3>
               <p>{foundMovie.Plot}</p>
@@ -27,7 +27,7 @@ const MovieDetail = (props) => {
             </div> 
             <div className="photoURL">
               <h3>Poster URL:</h3>
-              <summary>{foundMovie.Poster}</summary>
+              <details><summary>{foundMovie.Poster}</summary></details>
             </div>
           </div>  
         ) :
