@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../Header.css';
 
-const Header = () => {
+
+const Header = (props) => {
+  console.log(props.movieData);
   return (
-    <h1>This is the Header</h1>
+    <header>
+    <div>
+    <img src="https://i.imgur.com/zJg4M4I.png?1"></img>
+    <h1 className="title">Couch Sloth Movie App</h1>
+    </div>
+    </header>
   )
 }
 
