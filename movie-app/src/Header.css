@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    flex-direction: row;
+    
+}
+img {
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin: 20px;
+}
+
+.title {
+ 
+    font-size: 10px;
+    width: 200px;
+    float: right;
+    font-size: 20px;
+    width: 300px;
+    margin-top: 40px;
+
+    color: brown;
+
+}
+
+nav {
+
+    float: right;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    margin-left: 100px;;
+}
+
+a {
+    width: 50%;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding: 10px;
+}
+nav li {
+    display: inline-block; /* step 1 */
+    width: 12%; /* step 4 */
+    margin-right: 20px; /* step 5 */
+  }
+
+  .headerPost {
+    width: 50%;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.headerPoster{
+    display: inline-block; /* step 1 */
+    width: 12%; /* step 4 */
+    margin-right: 20px; /* step 5 */
+  }
