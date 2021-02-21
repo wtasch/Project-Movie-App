@@ -1,9 +1,11 @@
 import React from 'react';
 
 const MovieDetail = (props) => {
-  console.log(props.movieData);
+  console.log(props);
 
-  const foundMovie = props.movieData[0];
+  const foundMovie = props.movieData.find(movie=>{
+    return movie.Title===props.match.params.Title;
+  });
 
   return (
       <div className = "summary">
