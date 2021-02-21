@@ -27,7 +27,15 @@ const Header = (props) => {
       <h1 className="title">Couch Sloth Movie App</h1>
     </div>
     </header>
+    <div>
+            <p> from Header, need approval from team for this element</p>
+            {props.movieData.map(movieData => (
+          <div>
+            <h3>{movieData.title}  </h3>
+          </div>
 
+          ))}
+    </div>
   </div>
   )
 }
