@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+/*css for MovieDetail component */
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin-left: 20%;
+}
+ 
