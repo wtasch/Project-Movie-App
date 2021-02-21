@@ -10,18 +10,34 @@ img {
     margin: 20px;
 }
 
+
 .title {
- 
+    text-align: center;
+    
+    display: inline;
+    align-items: center;
+    margin-top: 300px;
     font-size: 10px;
-    width: 200px;
-    float: right;
-    font-size: 20px;
-    width: 300px;
-    margin-top: 40px;
-
+    width: 10px;
+    font-size: 30px;
     color: brown;
-
 }
+
+.title1 {
+    text-align: center;
+    display: inline; 
+    widows: 1px;
+    font-size: 10px;
+    width: 10px;
+    }
+
+    .title2 {
+        text-align: center;
+     display: inline; 
+     widows: 1px; 
+        font-size: 10px;
+        width: 0px;
+        }
 
 nav {
 
@@ -34,7 +50,7 @@ nav {
 
 a {
     width: 50%;
-    color: black;
+    color:saddlebrown;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -48,7 +64,7 @@ nav li {
 
   .headerPost {
     width: 50%;
-    color: black;
+    color:saddlebrown;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -56,6 +72,7 @@ nav li {
 }
 
 .headerPoster{
+    color:saddlebrown;
     display: inline-block; /* step 1 */
     width: 12%; /* step 4 */
     margin-right: 20px; /* step 5 */
