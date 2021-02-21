@@ -48,8 +48,6 @@ class App extends Component{
       {this.state.apiDataLoaded ?  
         <div className="App">
           <Header  movieData={this.state.movieData} />
-          <MovieList movieData={this.state.movieData} />
-          <MovieDetail movieData={this.state.movieData} />
           <Footer />
           <p>Data Loaded</p>
         </div>
