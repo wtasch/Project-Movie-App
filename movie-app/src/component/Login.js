@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom'
 import './Login.css';
+
 
 class Login extends Component{
     constructor(props){
@@ -19,9 +21,15 @@ class Login extends Component{
         })
     }
 
+    createLogin=(e)=>{
+        console.log(this.props)
+        e.preventDefault();
+    this.props.history.push('/')
+    }
+
     render(){
         return(        
-            <form className="Login-Form">
+            <form className="Login-Form"  onSubmit={this.createLogin}>
                 <label className="Login-Label" htmlFor="username">username</label>
                 <input className="Login-Input"
                     type="text"
@@ -36,9 +44,13 @@ class Login extends Component{
                     value={this.state.password}
                     onChange={this.handleChange}
                 />
-                <input className="Login-Submit" type="submit" value="Login!"/>
+                <input 
+                className="Login-Submit" 
+                type="submit" 
+                value="Login!"
+               />
             </form>
         )
     }
 }
-export default Login;
+export default withRouter(Login);

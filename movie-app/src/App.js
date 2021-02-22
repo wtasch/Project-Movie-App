@@ -67,7 +67,7 @@ class App extends Component{
           )}/>
 
           <Route exact path="/Login" render={(routerProps)=>(        
-          <Login Component={Login}/>
+          <Login {...routerProps}/>
           )}/>
 
 
