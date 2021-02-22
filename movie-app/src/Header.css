@@ -55,7 +55,7 @@ nav {
     border-bottom: solid saddlebrown;
 }
 
-a {
+.headerLink {
     width: 50%;
     color: white;;
     text-align: center;

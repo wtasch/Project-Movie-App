@@ -5,13 +5,16 @@ import '../MovieList.css';
 const MovieList = (props) => {
   console.log(props);
   return (
-    <div className="movieList"> 
-      <h1>Movies!!.......</h1>
+    <div className="movieList">
       {props.movieData.map(movie => (
         <div key={movie.imdbID} className="movieCard">
-          <Link to={`/MovieDetail/${movie.Title}`}>
-            <div>
+          <div className="movieCardImageContainer">
+            <Link to={`/MovieDetail/${movie.Title}`}>
               <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+            </Link>
+          </div>
+          <Link to={`/MovieDetail/${movie.Title}`}>
+            <div className="movieCardTitle">
               {movie.Title}
             </div>
           </Link>
