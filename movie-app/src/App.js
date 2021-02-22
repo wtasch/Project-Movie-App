@@ -79,7 +79,6 @@ class App extends Component{
 
           <Footer />
 
-          <p>Data Loaded</p>
         </div>
         : <p>data not loaded</p>
       }
