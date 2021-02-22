@@ -9,6 +9,7 @@ import {Route, Link, Switch} from 'react-router-dom';
 import Login from './component/Login'
 import Search from './component/Search';
 import SearchResults from './component/SearchResults';
+import Register from './component/Register'
 
 //api key 38e29c7e
 
@@ -53,13 +54,12 @@ class App extends Component{
         <Search />
 
           
-          <Link to="/">MovieList Page</Link>    
-          <Link to="/Login">Login</Link>
+       
 
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
 
-          
+          <Switch>
           <Route exact path="/" render={(routerProps)=>(
               <MovieList movieData={this.state.movieData} {...routerProps}/>
           )}/>
@@ -80,11 +80,15 @@ class App extends Component{
           {/* line below will be used when login functionality is created */}
           {/* <Route exact path="/Login" component={Login}/> */}
           
+          <Route exact path="/Register" render={(routerProps)=>(
+          <Register {...routerProps}/>
+          )}/>
+        
+          </Switch>
        
 
           <Footer />
 
-          <p>Data Loaded</p>
         </div>
         : <p>data not loaded</p>
       }

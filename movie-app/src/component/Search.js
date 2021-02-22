@@ -28,7 +28,6 @@ class Search extends Component {
 
 
   render() {
-    const title = this.state.title;
     return (
       <div className="movieSearch">
         <form onSubmit={this.searchConfirm}>
