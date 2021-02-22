@@ -3,38 +3,61 @@ header {
     flex-direction: row;
     
 }
-img {
-    width: 100px;
-    height: 70px;
+.logo {
+    width: 130px;
+    height: 100px;
     float: left;
-    margin: 20px;
+    margin: 5px;
 }
+
 
 .title {
+    position: relative;
+    top: 50px;
+    left: 300px;
+    display: inline;
+    margin-left: 80px;
+    
+  
  
-    font-size: 10px;
-    width: 200px;
-    float: right;
-    font-size: 20px;
-    width: 300px;
-    margin-top: 40px;
-
     color: brown;
-
 }
 
-nav {
+.title1 {
+    margin-top: 700px;
+    display: inline; 
+   font-size: 25px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 200px;
+    }
 
+.title2 {
+       
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline; 
+    widows: 1px; 
+    font-size: 30px;
+    margin-top: 700px;
+       
+        }
+
+nav {
+    
+    background-color: saddlebrown;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     float: right;
     position: fixed;
     top: 0;
+    height: 37px;
+    left: 40px;
     width: 80%;
     margin-left: 100px;;
+    border-bottom: solid saddlebrown;
 }
 
 a {
     width: 50%;
-    color: black;
+    color: white;;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -48,7 +71,7 @@ nav li {
 
   .headerPost {
     width: 50%;
-    color: black;
+    color:saddlebrown;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -56,6 +79,7 @@ nav li {
 }
 
 .headerPoster{
+    color:saddlebrown;
     display: inline-block; /* step 1 */
     width: 12%; /* step 4 */
     margin-right: 20px; /* step 5 */

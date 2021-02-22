@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import '../Header.css';
 
 
-
-
-
-
 const Header = (props) => {
-  console.log(props.movieData);
+
+
   return (
+
+
 <div>
     <header>
+
+  
+
       <nav>
       <ul>
         <li><a>Home</a></li>
@@ -23,12 +25,38 @@ const Header = (props) => {
 
       </nav>
     <div>
-      <img src="https://i.imgur.com/zJg4M4I.png?1"></img>
-      <h1 className="title">Couch Sloth Movie App</h1>
+      <img className="logo" src="https://i.imgur.com/zJg4M4I.png?1"></img>
+    </div>
+    <div>
+      <div className="title">
+        <h1 className="title1">Couch </h1>
+        <h1 className="title2">Sloth</h1>
+        <h1 className="title1"> Movie App</h1>
+      </div>
     </div>
     </header>
+
+  </div>
+  )
+}
+
+export default Header;
+
+
+
+/*
+
+
+
+
+  console.log(props.movieData);
+
+
+  
+
+
     <div>
-            <p> from Header, need approval from team for this element</p>
+          
             {props.movieData.map(movieData => (
           <div className="headerPoster">
             
@@ -38,8 +66,5 @@ const Header = (props) => {
 
           ))}
     </div>
-  </div>
-  )
-}
 
-export default Header;
+    */
