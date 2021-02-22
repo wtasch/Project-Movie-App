@@ -18,7 +18,7 @@ const Header = (props) => {
         <Link className="headerLink" to="/">Movie List Page</Link>
         <Link className="headerLink" to="/Login">LogIn</Link>
   
-         </nav>
+      </nav>
     <div>
       <img className="logo" src="https://i.imgur.com/zJg4M4I.png?1"></img>
     </div>
@@ -59,8 +59,6 @@ export default Header;
 
 
   console.log(props.movieData);
-
-
   
 
 
