@@ -10,6 +10,11 @@ import './Login.css';
         
     })
 
+
+    //followed the example from caseybook
+    //along with using the following url from medium:
+    //https://medium.com/technoetics/create-basic-login-forms-using-react-js-hooks-and-bootstrap-2ae36c15e551
+    
    const handleChange=(e)=>{
         console.log(e.target)
         const {name,value}=e.target;
