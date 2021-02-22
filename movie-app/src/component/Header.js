@@ -14,9 +14,6 @@ const Header = (props) => {
 <div>
 
 
-
-
-
   
     <header>
       
@@ -39,8 +36,21 @@ const Header = (props) => {
         <h1 className="title1"> Movie App</h1>
       </div>
     </div>
-    </header>
-
+    
+    <div className="dropmenu">
+        <label for="genre">Choose a car:</label>
+        <select name="genre" id="genre">
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Western">Western</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Sport">Sport</option>
+        </select>
+    </div>
+</header>
   </div>
   )
 }

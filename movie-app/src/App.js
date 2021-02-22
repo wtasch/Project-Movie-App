@@ -51,8 +51,7 @@ class App extends Component{
        
 
           
-          <Link to="/">MovieList Page</Link>    
-          <Link to="/Login">Login</Link>
+    
 
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
