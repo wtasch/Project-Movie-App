@@ -31,13 +31,13 @@ img {
     width: 200px;
     }
 
-    .title2 {
+.title2 {
        
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        display: inline; 
-        widows: 1px; 
-        font-size: 30px;
-        margin-top: 700px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline; 
+    widows: 1px; 
+    font-size: 30px;
+    margin-top: 700px;
        
         }
 
@@ -46,8 +46,11 @@ nav {
     float: right;
     position: fixed;
     top: 0;
+    height: 37px;
+    left: 40px;
     width: 80%;
     margin-left: 100px;;
+    border-bottom: solid saddlebrown;
 }
 
 a {
