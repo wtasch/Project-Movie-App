@@ -3,7 +3,7 @@ header {
     flex-direction: row;
     
 }
-img {
+.logo {
     width: 130px;
     height: 100px;
     float: left;
@@ -42,6 +42,8 @@ img {
         }
 
 nav {
+    
+    background-color: saddlebrown;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     float: right;
     position: fixed;
@@ -55,7 +57,7 @@ nav {
 
 a {
     width: 50%;
-    color:saddlebrown;
+    color: white;;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

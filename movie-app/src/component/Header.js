@@ -10,6 +10,9 @@ const Header = (props) => {
 
 <div>
     <header>
+
+  
+
       <nav>
       <ul>
         <li><a>Home</a></li>
@@ -22,7 +25,7 @@ const Header = (props) => {
 
       </nav>
     <div>
-      <img src="https://i.imgur.com/zJg4M4I.png?1"></img>
+      <img className="logo" src="https://i.imgur.com/zJg4M4I.png?1"></img>
     </div>
     <div>
       <div className="title">
