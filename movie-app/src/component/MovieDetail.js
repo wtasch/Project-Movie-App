@@ -30,6 +30,14 @@ const MovieDetail = (props) => {
               <h3>Release Date</h3><p>{foundMovie.Released}</p>
               <h3>Runtime</h3><p>{foundMovie.Runtime}</p>
             </div>
+            <div>
+              {foundMovie.Ratings.map(ratings => 
+                <div>
+                  <p>{ratings.Source}</p>
+                  <p>{ratings.Value}</p>
+                </div>
+              )}
+            </div>
              
             
           </div>  
