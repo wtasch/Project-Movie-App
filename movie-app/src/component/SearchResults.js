@@ -16,16 +16,30 @@ class SearchResults extends Component {
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
 
-
-    console.log(this.props.location.state.title);
-    console.log(movieData1)
-
+    this.setState ({
+      resultsData: movieData1.data.Search,
+      apiDataLoaded: true
+    })
   }
 
   render() {
+
     return (
       <div>
-        test
+        {this.state.apiDataLoaded ? 
+        <div>
+          <h1>testing</h1>
+          <div>
+            {this.state.resultsData.map(result => (
+              <div key={result.imdbID}>
+                {result.Title}
+              </div>
+            ))}
+          </div>  
+        </div>
+        :
+        <h3>data not loaded</h3>
+        }
       </div>
     )
   }

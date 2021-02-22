@@ -14,19 +14,12 @@ class Search extends Component {
 
   searchConfirm = (e) => {
     e.preventDefault()
-    console.log("did a search")
-    console.log(this.state.title)
     this.setState({
       valid: true
     })
-
-    console.log("true")
-    console.log(this.valid);
   }
 
   handleChange = (evt) => {
-    console.log(evt.target.name, evt.target.value);
-    console.log("check")
     this.setState({
       [evt.target.name]: evt.target.value
     })
@@ -36,7 +29,6 @@ class Search extends Component {
 
   render() {
     const title = this.state.title;
-    console.log(this.state.valid)
     return (
       <div className="movieSearch">
         <form onSubmit={this.searchConfirm}>
@@ -51,14 +43,14 @@ class Search extends Component {
             value="submit"
           />
         </form>
-      <h3> 
-        { this.state.valid ? <Redirect 
-        to={{
-          pathname:"./SearchResults",
-          state: { title: this.state.title },
-        }} 
-        />
-        : console.log(this.state.valid) }</h3>
+          { this.state.valid ? <Redirect 
+            to={{
+              pathname:"./SearchResults",
+              state: { title: this.state.title },
+            }} 
+            />
+            : <h3>data not loaded</h3>
+          }
       </div>
     )
   }
