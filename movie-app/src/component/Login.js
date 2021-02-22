@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom'
 import './Login.css';
+import users from '../users.json';
 
 
     function Login(props){
+        console.log(users)
     const [state, setState]=useState({
-        username:'',
-        password:''
-        
+        username:users[0].username,
+        password:users[0].password
     })
 
 
     //followed the example from caseybook
     //along with using the following url from medium:
     //https://medium.com/technoetics/create-basic-login-forms-using-react-js-hooks-and-bootstrap-2ae36c15e551
-    
+
    const handleChange=(e)=>{
         console.log(e.target)
         const {name,value}=e.target;
@@ -24,18 +25,19 @@ import './Login.css';
         }))
     }
 
-    const createLogin=(e)=>{
+    const userLogin=(e)=>{
         console.log(props)
         e.preventDefault();
         // const pastUsers=state.username;
         // console.log(pastUsers);
         // pastUsers.push(user);
         // setState({users:pastUsers})
+        if(state.username==='')
     props.history.push('/')
     }
 
         return(        
-            <form className="Login-Form"  onSubmit={createLogin}>
+            <form className="Login-Form"  onSubmit={userLogin}>
                 <label className="Login-Label" htmlFor="username">username</label>
                 <input className="Login-Input"
                     type="text"
