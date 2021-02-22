@@ -6,22 +6,19 @@ import '../Header.css';
 const Header = (props) => {
 
 
-  return (
-
-
+  return (  
 <div>
     <header>
-
-
+  
       <nav>
-     
-        <Link className="headerLink">Home</Link>
+        <img className="logoNav" src="https://i.imgur.com/zJg4M4I.png?1"></img>
+        <Link className="headerLink" to="/">Home</Link>
         <Link className="headerLink">News</Link>
-        <input type="text" placeholder="Search.."/>
+        <input className="search" type="text" placeholder="Search a Movie..."/>
         <Link className="headerLink" to="/">Movie List Page</Link>
         <Link className="headerLink" to="/Login">LogIn</Link>
   
-         </nav>
+      </nav>
     <div>
       <img className="logo" src="https://i.imgur.com/zJg4M4I.png?1"></img>
     </div>
@@ -32,8 +29,22 @@ const Header = (props) => {
         <h1 className="title1"> Movie App</h1>
       </div>
     </div>
-    </header>
-
+    
+        <div className="dropmenu">
+        <label for="genre">Choose a Movie Type     </label>
+        <select className="droplist" name="genre" id="genre" placeholder="Genre">
+          <option value="All">All</option>
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Western">Western</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Sport">Sport</option>
+        </select>
+    </div>
+</header>
   </div>
   )
 }
@@ -48,8 +59,6 @@ export default Header;
 
 
   console.log(props.movieData);
-
-
   
 
 

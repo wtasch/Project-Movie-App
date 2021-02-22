@@ -1,0 +1,46 @@
+
+    footer {
+ 
+    background-image: linear-gradient(to right, brown , yellow);      
+   
+    
+}
+.logoNav {
+    width: 30px;
+    height: 20px; 
+    margin-left: 5px;
+    margin-top:3px;;  
+ 
+}
+
+.title3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: inline;    
+    color: brown;
+}
+
+.title4 {
+   
+    display: inline; 
+   font-size: 25px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 200px;
+    }
+
+.title5 {
+       
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline; 
+    widows: 1px; 
+    font-size: 35px;
+          
+        }
+
+.social {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+        }
+

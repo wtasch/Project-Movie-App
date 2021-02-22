@@ -1,31 +1,40 @@
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
+    background-image: linear-gradient(to right, brown , yellow);      
+   
     
 }
 .logo {
     width: 130px;
     height: 100px;
-    float: left;
-    margin: 5px;
+    float: right;
+    margin-left: 5px;
+    margin-top: 35px;;
 }
 
+.logoNav {
+    width: 30px;
+    height: 20px; 
+    margin-left: 5px;
+    margin-top:3px;;  
+ 
+}
 
 .title {
     position: relative;
     top: 50px;
     left: 300px;
     display: inline;
-    margin-left: 80px;
-    
+    margin-left: 80px;    
     color: brown;
 }
 
 .title1 {
     margin-top: 700px;
     display: inline; 
-   font-size: 25px;
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
     }
 
@@ -34,23 +43,17 @@ header {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: inline; 
     widows: 1px; 
-    font-size: 30px;
-    margin-top: 700px;
-       
-        }
+    font-size: 35px;
+    margin-top: 700px;       
+    }
 
-nav {
-    
+nav {    
     background-color: #353b48;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    float: right;
     position: fixed;
-    top: 0;
     height: 37px;
-    left: 40px;
     width: 100%;
-    margin-left: 100px;;
-    
+     
 }
 
 .headerLink {
@@ -61,24 +64,21 @@ nav {
     text-decoration: none;
     padding: 10px;
 }
-nav li {
-    display: inline-block; /* step 1 */
-    width: 12%; /* step 4 */
-    margin-right: 20px; /* step 5 */
-  }
 
-  .headerPost {
-    width: 50%;
-    color:saddlebrown;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    padding: 10px;
+.search {
+    width: 300px;
+    border-radius: 6px;
 }
 
-.headerPoster{
-    color:saddlebrown;
-    display: inline-block; /* step 1 */
-    width: 12%; /* step 4 */
-    margin-right: 20px; /* step 5 */
-  }
+.dropmenu {  
+    color: brown;    
+    float: right;
+    margin-left: 500px;
+    margin-top: 70px;;
+
+}
+.droplist {  
+color: brown;
+}
+
+
