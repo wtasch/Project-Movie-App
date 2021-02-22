@@ -1,0 +1,21 @@
+* {border: 1px black solid;}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieList h1 {
+  width: 100%;
+}
+
+.movieCard {
+  height: 400px;
+  width: 200px;
+  padding: 25px;
+}
+
+.movieCard img{
+  object-fit: cover;
+  height: auto;
+}
