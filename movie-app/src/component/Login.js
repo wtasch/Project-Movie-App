@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import {withRouter} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import './Login.css';
 import users from '../users.json';
+import Register from './Register'
+
 
 
     function Login(props){
@@ -41,7 +43,8 @@ import users from '../users.json';
     
     
 
-        return(        
+        return(  
+            <div>      
             <form className="Login-Form"  onSubmit={userLogin}>
                 <label className="Login-Label" htmlFor="username">username</label>
                 <input className="Login-Input"
@@ -63,6 +66,11 @@ import users from '../users.json';
                 value="Login!"
                />
             </form>
+            <div className="Register-Link">
+                <h4>Not a user?  Sign up {<Link to="/Register"> Here</Link>}</h4>
+
+            </div>
+            </div>
         )
     }
 
