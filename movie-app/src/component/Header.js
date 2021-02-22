@@ -6,22 +6,15 @@ import '../Header.css';
 const Header = (props) => {
 
 
-  return (
-
-
-    
-
+  return (  
 <div>
-
-
-  
     <header>
-      
+  
       <nav>
         <img className="logoNav" src="https://i.imgur.com/zJg4M4I.png?1"></img>
-        <Link className="headerLink">Home</Link>
+        <Link className="headerLink" to="/">Home</Link>
         <Link className="headerLink">News</Link>
-        <input className="search" type="text" placeholder="Search.."/>
+        <input className="search" type="text" placeholder="Search a Movie..."/>
         <Link className="headerLink" to="/">Movie List Page</Link>
         <Link className="headerLink" to="/Login">LogIn</Link>
   
@@ -37,9 +30,10 @@ const Header = (props) => {
       </div>
     </div>
     
-    <div className="dropmenu">
-        <label for="genre">Choose a car:</label>
-        <select name="genre" id="genre">
+        <div className="dropmenu">
+        <label for="genre">Choose a Movie Type     </label>
+        <select className="droplist" name="genre" id="genre" placeholder="Genre">
+          <option value="All">All</option>
           <option value="Action">Action</option>
           <option value="Drama">Drama</option>
           <option value="Thriller">Thriller</option>
