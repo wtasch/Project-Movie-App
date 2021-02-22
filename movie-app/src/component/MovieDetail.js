@@ -1,10 +1,10 @@
 import React from 'react';
 
 const MovieDetail = (props) => {
-  console.log(props.movieData);
+  console.log(props);
 
-  const foundMovie = props.movieData.find(movie => {
-    return movie.Title === props.match.params.Title;
+  const foundMovie = props.movieData.find(movie=>{
+    return movie.Title===props.match.params.Title;
   });
 
   return (
@@ -29,7 +29,7 @@ const MovieDetail = (props) => {
             </div> 
             <div className="photoURL">
               <h3>Poster URL:</h3>
-              <details><summary>{foundMovie.Poster}</summary></details>
+              <img src={foundMovie.Poster} alt="movie poster" />
             </div>
           </div>  
         ) :
