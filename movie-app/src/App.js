@@ -57,23 +57,13 @@ class App extends Component{
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
           {/* <Link to="/MovieDetails">Movie Details Page</Link> */}
 
-<<<<<<< HEAD
-          <Switch>
-=======
           
->>>>>>> a46a897d76813b945607c2274917ba2c3a341536
           <Route exact path="/" render={(routerProps)=>(
               <MovieList movieData={this.state.movieData} {...routerProps}/>
           )}/>
 
-<<<<<<< HEAD
-          <Route exact path="/MovieDetails/:Title" render={(routerProps)=>(        
-          <MovieDetail movieData={this.state.movieData}
-          {...routerProps} />
-=======
           <Route path="/MovieDetail/:Title" render={(routerProps)=>(        
           <MovieDetail movieData={this.state.movieData} {...routerProps} />
->>>>>>> a46a897d76813b945607c2274917ba2c3a341536
           )}/>
 
           <Route exact path="/Login" render={(routerProps)=>(        

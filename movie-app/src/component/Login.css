@@ -20,6 +20,10 @@ font-size: 24px;
 border-width: thin;
 font-size: 20px;
 margin-top: 20px;
+background-color:lemonchiffon;
+height: 40px;
+width:120px;
+border-radius: 10px;
 }
 
 .Login-Label{
