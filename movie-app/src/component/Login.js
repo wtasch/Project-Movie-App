@@ -7,8 +7,8 @@ import users from '../users.json';
     function Login(props){
         console.log(users)
     const [state, setState]=useState({
-        username:users[0].username,
-        password:users[0].password
+        username:'',
+        password:''
     })
 
 
@@ -32,9 +32,14 @@ import users from '../users.json';
         // console.log(pastUsers);
         // pastUsers.push(user);
         // setState({users:pastUsers})
-        if(state.username==='')
-    props.history.push('/')
-    }
+       const foundUser=users.find((user,index)=>{
+           return(user.username===state.username&&user.password==state.password)
+       })
+       console.log(foundUser);
+       foundUser ? props.history.push('/'):<h1>login failed</h1>
+       }
+    
+    
 
         return(        
             <form className="Login-Form"  onSubmit={userLogin}>
