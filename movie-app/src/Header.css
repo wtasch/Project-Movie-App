@@ -26,16 +26,15 @@ header {
     top: 50px;
     left: 300px;
     display: inline;
-    margin-left: 80px;
-    
+    margin-left: 80px;    
     color: brown;
 }
 
 .title1 {
     margin-top: 700px;
     display: inline; 
-   font-size: 25px;
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
     }
 
@@ -46,16 +45,13 @@ header {
     widows: 1px; 
     font-size: 35px;
     margin-top: 700px;       
-        }
+    }
 
-nav {
-    
+nav {    
     background-color: #353b48;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
     position: fixed;
     height: 37px;
-   
     width: 100%;
      
 }
@@ -81,12 +77,8 @@ nav {
     margin-top: 70px;;
 
 }
-.droplist {
-  
-    color: brown;
+.droplist {  
+color: brown;
 }
 
-footer {
-    
-}
 

@@ -13,15 +13,17 @@ const Footer = () => {
               <h1 className="title5">Sloth</h1>
               <h1 className="title4"> Movie App</h1>
             </div>
-          <br>
-                 </br>
-          <div className="social">
+            <br></br>
+            <div className="social">            
               <a href="http://www.facebook.com/sharer.php?u=http://www.google.com">
-          Share This Link on Facebook   </a>
-          <a href="http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.google.com">
-          Share This on Twitter</a>
+                 Share This Link on Facebook   </a>
+              <a href="http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.google.com">
+                 Share This on Twitter</a>      
+                 <div className="logoFoot">
+                   <img className="logoNav" src="https://i.imgur.com/zJg4M4I.png?1"></img>
+                 </div>    
+            </div>
           </div>
-        </div>
        </footer>
     </div>
   )
