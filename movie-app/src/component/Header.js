@@ -15,11 +15,11 @@ const Header = (props) => {
 
       <nav>
       <ul>
-        <li><a>Home</a></li>
-        <li><a>News</a></li>
-        <li><a>Contact</a></li>
-        <li><a>About</a></li>
-        <li><a>LogIn/SignIn</a></li>
+        <li><a className="headerLink">Home</a></li>
+        <li><a className="headerLink">News</a></li>
+        <li><a className="headerLink">Contact</a></li>
+        <li><a className="headerLink">About</a></li>
+        <li><a className="headerLink">LogIn/SignIn</a></li>
   
       </ul>
 
