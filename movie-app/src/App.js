@@ -7,6 +7,8 @@ import MovieDetail from './component/MovieDetail';
 import Footer from './component/Footer';
 import {Route, Link, Switch} from 'react-router-dom';
 import Login from './component/Login'
+import Search from './component/Search';
+import SearchResults from './component/SearchResults';
 import Register from './component/Register'
 
 //api key 38e29c7e
@@ -49,7 +51,7 @@ class App extends Component{
       {this.state.apiDataLoaded ?  
         <div className="App">
         <Header  movieData={this.state.movieData} />
-       
+        <Search />
 
           
        
@@ -70,6 +72,14 @@ class App extends Component{
           <Login {...routerProps}/>
           )}/>
 
+          <Route exact path="/SearchResults" render={(routerProps) => (
+            <SearchResults {...routerProps}/>
+          )}/>
+
+
+          {/* line below will be used when login functionality is created */}
+          {/* <Route exact path="/Login" component={Login}/> */}
+          
           <Route exact path="/Register" render={(routerProps)=>(
           <Register {...routerProps}/>
           )}/>

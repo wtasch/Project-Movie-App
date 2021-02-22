@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.movieSearch {
+  width: 100%;
+}
+
 .movieList h1 {
   width: 100%;
 }
