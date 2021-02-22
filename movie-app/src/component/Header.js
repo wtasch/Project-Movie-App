@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
 import '../Header.css';
 
 
@@ -11,19 +12,16 @@ const Header = (props) => {
 <div>
     <header>
 
-  
 
       <nav>
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>News</a></li>
-        <li><a>Contact</a></li>
-        <li><a>About</a></li>
-        <li><a>LogIn/SignIn</a></li>
+     
+        <Link className="headerLink">Home</Link>
+        <Link className="headerLink">News</Link>
+        <input type="text" placeholder="Search.."/>
+        <Link className="headerLink" to="/">Movie List Page</Link>
+        <Link className="headerLink" to="/Login">LogIn</Link>
   
-      </ul>
-
-      </nav>
+         </nav>
     <div>
       <img className="logo" src="https://i.imgur.com/zJg4M4I.png?1"></img>
     </div>
