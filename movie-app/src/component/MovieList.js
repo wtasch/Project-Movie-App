@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MovieList = (props) => {
-  console.log(props)
+  console.log(props);
   return (
     <div> 
       <h1>Movies!!.......</h1>
