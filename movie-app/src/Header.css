@@ -4,43 +4,45 @@ header {
     
 }
 img {
-    width: 100px;
-    height: 70px;
+    width: 130px;
+    height: 100px;
     float: left;
-    margin: 20px;
+    margin: 5px;
 }
 
 
 .title {
-    text-align: center;
-    
+    position: relative;
+    top: 50px;
+    left: 300px;
     display: inline;
-    align-items: center;
-    margin-top: 300px;
-    font-size: 10px;
-    width: 10px;
-    font-size: 30px;
+    margin-left: 80px;
+    
+  
+ 
     color: brown;
 }
 
 .title1 {
-    text-align: center;
+    margin-top: 700px;
     display: inline; 
-    widows: 1px;
-    font-size: 10px;
-    width: 10px;
+   font-size: 25px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 200px;
     }
 
     .title2 {
-        text-align: center;
-     display: inline; 
-     widows: 1px; 
-        font-size: 10px;
-        width: 0px;
+       
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: inline; 
+        widows: 1px; 
+        font-size: 30px;
+        margin-top: 700px;
+       
         }
 
 nav {
-
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     float: right;
     position: fixed;
     top: 0;

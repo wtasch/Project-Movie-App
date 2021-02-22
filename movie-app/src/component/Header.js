@@ -23,8 +23,10 @@ const Header = (props) => {
       </nav>
     <div>
       <img src="https://i.imgur.com/zJg4M4I.png?1"></img>
+    </div>
+    <div>
       <div className="title">
-        <h1 className="title1">Couch</h1>
+        <h1 className="title1">Couch </h1>
         <h1 className="title2">Sloth</h1>
         <h1 className="title1"> Movie App</h1>
       </div>
