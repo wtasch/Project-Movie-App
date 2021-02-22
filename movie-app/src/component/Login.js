@@ -1,48 +1,49 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom'
 import './Login.css';
 
 
-class Login extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            username:'',
-            password:''
-        }
-    }
+    function Login(props){
+    const [state, setState]=useState({
+        username:'',
+        password:''
+        
+    })
 
-    handleChange=(e)=>{
+   const handleChange=(e)=>{
         console.log(e.target)
         const {name,value}=e.target;
-        this.setState({
-            
+        setState(prevState=>({
+            ...prevState,          
             [name]:value
-        })
+        }))
     }
 
-    createLogin=(e)=>{
-        console.log(this.props)
+    const createLogin=(e)=>{
+        console.log(props)
         e.preventDefault();
-    this.props.history.push('/')
+        // const pastUsers=state.username;
+        // console.log(pastUsers);
+        // pastUsers.push(user);
+        // setState({users:pastUsers})
+    props.history.push('/')
     }
 
-    render(){
         return(        
-            <form className="Login-Form"  onSubmit={this.createLogin}>
+            <form className="Login-Form"  onSubmit={createLogin}>
                 <label className="Login-Label" htmlFor="username">username</label>
                 <input className="Login-Input"
                     type="text"
                     name="username"
-                    value={this.state.username}
-                    onChange={this.handleChange}
+                    value={state.username}
+                    onChange={handleChange}
                 />
                   <label className="Login-Label" htmlFor="password">Password</label>
                 <input className="Login-Input"
                     type="password"
                     name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
+                    value={state.password}
+                    onChange={handleChange}
                 />
                 <input 
                 className="Login-Submit" 
@@ -52,5 +53,6 @@ class Login extends Component{
             </form>
         )
     }
-}
+
+
 export default withRouter(Login);
