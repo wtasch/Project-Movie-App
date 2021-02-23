@@ -5,13 +5,7 @@
    
     
 }
-.logoNav {
-    width: 30px;
-    height: 20px; 
-    margin-left: 5px;
-    margin-top:3px;;  
- 
-}
+
 
 .title3 {
     margin-left: auto;
@@ -21,11 +15,10 @@
     color: brown;
 }
 
-.title4 {
-   
+.title4 {   
     display: inline; 
-   font-size: 25px;
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
     }
 
@@ -42,5 +35,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+        }
+
+.logoFoot {
+position: relative;
+margin: 0;
+float: right;
+top: -45px;
+Left: 255px;
+
         }
 

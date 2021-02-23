@@ -9,13 +9,13 @@ header {
     width: 130px;
     height: 100px;
     float: right;
-    margin-left: 5px;
+    margin-left: 0px;
     margin-top: 35px;;
 }
 
 .logoNav {
-    width: 30px;
-    height: 20px; 
+    width: 100px;
+    height: 60px; 
     margin-left: 5px;
     margin-top:3px;;  
  
