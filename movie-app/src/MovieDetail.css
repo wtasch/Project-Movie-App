@@ -62,7 +62,7 @@
     background-color: #485460;
     color: #fff;
     margin-top: 0;
-    width: 60%;
+    width: 75%;
     height: 15%;
     font-size: 70%;
     font-weight:400;
@@ -72,6 +72,14 @@
 }   
 .h-var {
     margin-inline-start: 4px;
+}
+.plus-btn {
+    position: relative;
+}
+.add-btn {
+    position: absolute;
+    top:25%;
+    left:10%;  
 }
 
 

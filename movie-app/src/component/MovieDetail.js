@@ -6,6 +6,7 @@ const MovieDetail = (props) => {
     return movie.Title===props.match.params.Title;
   });
   console.log(foundMovie);
+  
 
   return (
       <div className = "movie-detail-container">
@@ -28,10 +29,8 @@ const MovieDetail = (props) => {
               </div>
               <div className="plot-summary">  
                 <h3 className="plot">{foundMovie.Plot}</h3>
-            
                 <h3>Actors/Cast</h3>
                 <p>{foundMovie.Actors}</p>
-              
                 <h3>Director</h3>
                 <p>{foundMovie.Director}</p>
                 <h3>Languages</h3>
@@ -47,7 +46,12 @@ const MovieDetail = (props) => {
               </div>
               <div className="var-div">
                 <h5>Runtime:</h5><h5 className="h-var">{foundMovie.Runtime}</h5>
-              </div>  
+              </div>
+              <div className="plus-btn">
+                <button className="add-btn" >
+                  <div>Add to Watchlist</div>
+                </button>
+              </div>   
             </div>
           </div>  
         ) :
