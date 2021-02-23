@@ -21,7 +21,6 @@ class Search extends Component {
 
   handleChange = (evt) => {
     console.log(evt.target.value);
-    console.log(evt.target);
     this.setState({
       [evt.target.name]: evt.target.value
     })

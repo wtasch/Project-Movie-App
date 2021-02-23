@@ -1,5 +1,4 @@
 #searchBar {
-  border: hotpink solid 5px;
   background-color: #353b48;
   display: flex;
   justify-content: center;
@@ -39,7 +38,7 @@
 }
 
 .movieSearch {
-  width: 100%;
+  width:100%;
 }
 
 .resultsList h1 {
