@@ -7,6 +7,16 @@ const Articles = () => {
   return (
     <div>
       <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      <p>articles</p>
+      
     </div>
   )
 }

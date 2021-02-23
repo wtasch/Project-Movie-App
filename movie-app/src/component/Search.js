@@ -48,7 +48,7 @@ class Search extends Component {
               state: { title: this.state.title },
             }} 
             />
-            : <h3>data not loaded</h3>
+            : <h3>data not loaded search</h3>
           }
       </div>
     )

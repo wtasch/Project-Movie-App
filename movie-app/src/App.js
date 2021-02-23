@@ -39,7 +39,7 @@ class App extends Component{
       movieData4.data,
       movieData5.data,
     ];
-    console.log(movieData);
+    console.log(news);
     this.setState ({
       movieData: movieData,
       news: news.data.articles,
@@ -55,6 +55,7 @@ class App extends Component{
       {this.state.apiDataLoaded ?  
         <div className="App">
         <Header  movieData={this.state.movieData} />
+        <Route path="/News" component={Articles} />  
         <Search />
         
 
@@ -89,9 +90,7 @@ class App extends Component{
           <Register {...routerProps}/>
           )}/>
 
-          <Route exact path="/News" render={(routerProps)=>(        
-          <Login {...routerProps}/>
-          )}/>    
+           
         
           </Switch>
        
@@ -99,7 +98,7 @@ class App extends Component{
           <Footer />
 
         </div>
-        : <p>data not loaded</p>
+        : <p>data not loaded test</p>
       }
     </div>
   );
