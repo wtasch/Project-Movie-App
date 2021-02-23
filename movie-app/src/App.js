@@ -9,7 +9,9 @@ import {Route, Link, Switch} from 'react-router-dom';
 import Login from './component/Login'
 import Search from './component/Search';
 import SearchResults from './component/SearchResults';
-import Register from './component/Register'
+import Register from './component/Register';
+import SearchDetail from './component/SearchDetail';
+import Articles from './component/Articles';
 
 //api key 38e29c7e
 
@@ -18,6 +20,7 @@ class App extends Component{
     super(props);
     this.state={
       movieData:[],
+      news: [],
       apiDataLoaded: false
     }
   }
@@ -28,6 +31,7 @@ class App extends Component{
     const movieData3=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=blazing+saddles")
     const movieData4=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=inception")
     const movieData5=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=caddyshack")
+    const news = await axios.get("https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=e444bb227c874f1f850afa4ab753e1fc");
     
     const movieData = [
       movieData1.data,
@@ -36,9 +40,11 @@ class App extends Component{
       movieData4.data,
       movieData5.data,
     ];
-    console.log(movieData);
+
+    //console.log(news.data.articles);
     this.setState ({
       movieData: movieData,
+      news: news.data.articles,
       apiDataLoaded: true
     })
   }
@@ -46,12 +52,15 @@ class App extends Component{
 
   render(){
     console.log(this.state.movieData.Title)
+    console.log(this.state.news)
   return (
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
         <Header  movieData={this.state.movieData} />
+
         <Search />
+        
 
           
        
@@ -68,6 +77,10 @@ class App extends Component{
           <MovieDetail movieData={this.state.movieData} {...routerProps} />
           )}/>
 
+          <Route path="/SearchDetail" render={(routerProps) => (
+            <SearchDetail {...routerProps} />
+          )} />
+
           <Route exact path="/Login" render={(routerProps)=>(        
           <Login {...routerProps}/>
           )}/>
@@ -76,6 +89,8 @@ class App extends Component{
             <SearchResults {...routerProps}/>
           )}/>
 
+          <Articles news={this.state.news} />
+        
 
           {/* line below will be used when login functionality is created */}
           {/* <Route exact path="/Login" component={Login}/> */}
@@ -83,6 +98,8 @@ class App extends Component{
           <Route exact path="/Register" render={(routerProps)=>(
           <Register {...routerProps}/>
           )}/>
+
+           
         
           </Switch>
        
@@ -90,7 +107,7 @@ class App extends Component{
           <Footer />
 
         </div>
-        : <p>data not loaded</p>
+        : <p>data not loaded test</p>
       }
     </div>
   );

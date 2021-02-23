@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Search from './Search';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import '../SearchResults.css'
 
 class SearchResults extends Component {
   constructor(props) {
     super(props);
     this.state={
-      resultsData:[],
-      apiDataLoaded: false
+      searchTerm: "",
+      movieData:[],
+      apiDataLoaded: false,
+      titledata: []
     }
   }
 
@@ -17,25 +20,41 @@ class SearchResults extends Component {
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
 
     this.setState ({
-      resultsData: movieData1.data.Search,
+      searchTerm: movieSearch,
+      movieData: movieData1.data.Search,
       apiDataLoaded: true
     })
   }
 
   render() {
-
     return (
       <div>
         {this.state.apiDataLoaded ? 
-        <div>
-          <h1>testing</h1>
-          <div>
-            {this.state.resultsData.map(result => (
-              <div key={result.imdbID}>
-                {result.Title}
+        <div className="resultsList">
+          <h1>{`search results for "${this.state.searchTerm}"...`}</h1>
+          {this.state.movieData.map(movie => (
+            <div key={movie.imdbID} className="resultsCard">
+          <div className="resultsCardImageContainer">
+            <Link 
+              to={{
+                pathname: `/SearchDetail/`,
+                state: { titledata: movie.imdbID },
+              }}>
+                <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+            </Link>
+            {console.log(movie.imdbID)}
+          </div>
+          <Link 
+              to={{
+                pathname: `/SearchDetail/`,
+                state: { titledata: movie.imdbID },
+              }}>
+              <div className="resultsCardTitle">
+                {movie.Title}
               </div>
-            ))}
-          </div>  
+          </Link>
+        </div>
+          ))}
         </div>
         :
         <h3>data not loaded</h3>
