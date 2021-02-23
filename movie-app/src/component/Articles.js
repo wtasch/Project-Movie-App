@@ -15,7 +15,13 @@ const Articles = (props) => {
       </div>
 
       <div className="article">
-      {props.news.map(news => <p className="newstext" >{news.title}<img className="imgNews" src={news.urlToImage}/></p>)}  
+             {props.news.map(news =>       
+             <p className="newstext" >
+             {news.title}<img className="imgNews" src={news.urlToImage}/>
+             <a className="content"> {news.description}</a>           
+            </p>
+          )}   
+
           </div>
    </div>
   )
