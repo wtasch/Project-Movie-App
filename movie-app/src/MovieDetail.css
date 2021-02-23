@@ -44,7 +44,15 @@
     display: flex;
     color: #fff;
 }
-
+.summary {
+    font-weight: 400;
+    font-size: 95%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.plot p {
+    font-size: 95%;
+}
 .various {
     display: flex;
     justify-content: space-evenly;
