@@ -39,7 +39,8 @@ class App extends Component{
       movieData4.data,
       movieData5.data,
     ];
-    console.log(news);
+
+    //console.log(news.data.articles);
     this.setState ({
       movieData: movieData,
       news: news.data.articles,
@@ -50,12 +51,13 @@ class App extends Component{
 
   render(){
     console.log(this.state.movieData.Title)
+    console.log(this.state.news)
   return (
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
         <Header  movieData={this.state.movieData} />
-        <Route path="/News" component={Articles} />  
+
         <Search />
         
 
@@ -82,6 +84,8 @@ class App extends Component{
             <SearchResults {...routerProps}/>
           )}/>
 
+          <Articles news={this.state.news} />
+        
 
           {/* line below will be used when login functionality is created */}
           {/* <Route exact path="/Login" component={Login}/> */}
