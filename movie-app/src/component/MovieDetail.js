@@ -8,9 +8,9 @@ const MovieDetail = (props) => {
   console.log(foundMovie);
 
   return (
-      <div className = "movie-detail">
+      <div className = "movie-detail-container">
         {foundMovie ? (
-          <div>
+          <div className = "movie-detail">
             <div className="name-title">
               <h2>{foundMovie.Title}</h2>
             </div>
@@ -22,12 +22,12 @@ const MovieDetail = (props) => {
                 </div>
               )}
             </div>
-            <div className="wrapper">
+            <div className="detail-wrapper">
               <div className="poster">
                 <img src={foundMovie.Poster} alt="movie poster" />
               </div>
               <div className="plot">  
-                <h3>{foundMovie.Plot}</h3>
+                <h3 className="summary">{foundMovie.Plot}</h3>
             
                 <h3>Actors/Cast</h3>
                 <p>{foundMovie.Actors}</p>
@@ -49,9 +49,6 @@ const MovieDetail = (props) => {
                 <h5>Runtime:</h5><h5 className="h-var">{foundMovie.Runtime}</h5>
               </div>  
             </div>
-            
-             
-            
           </div>  
         ) :
         <p>Movie detail not loaded</p>
