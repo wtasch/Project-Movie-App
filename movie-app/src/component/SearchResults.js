@@ -10,7 +10,8 @@ class SearchResults extends Component {
     this.state={
       searchTerm: "",
       movieData:[],
-      apiDataLoaded: false
+      apiDataLoaded: false,
+      titledata: []
     }
   }
 
@@ -26,7 +27,6 @@ class SearchResults extends Component {
   }
 
   render() {
-
     return (
       <div>
         {this.state.apiDataLoaded ? 
@@ -35,14 +35,23 @@ class SearchResults extends Component {
           {this.state.movieData.map(movie => (
             <div key={movie.imdbID} className="resultsCard">
           <div className="resultsCardImageContainer">
-            <Link to={`/MovieDetail/${movie.Title}`}>
-              <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+            <Link 
+              to={{
+                pathname: `/SearchDetail/`,
+                state: { titledata: movie.imdbID },
+              }}>
+                <img src={movie.Poster} alt={`${movie.Title} Poster`} />
             </Link>
+            {console.log(movie.imdbID)}
           </div>
-          <Link to={`/MovieDetail/${movie.Title}`}>
-            <div className="resultsCardTitle">
-              {movie.Title}
-            </div>
+          <Link 
+              to={{
+                pathname: `/SearchDetail/`,
+                state: { titledata: movie.imdbID },
+              }}>
+              <div className="resultsCardTitle">
+                {movie.Title}
+              </div>
           </Link>
         </div>
           ))}
