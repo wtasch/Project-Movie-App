@@ -38,10 +38,16 @@ const MovieDetail = (props) => {
                 <p>{foundMovie.Language}</p>
               </div>
             </div>
-            <div className="various">  
-              <h5>Genre:</h5><h5>{foundMovie.Genre}</h5>
-              <h5>Release Date:</h5><h5>{foundMovie.Released}</h5>
-              <h5>Runtime:</h5><h5>{foundMovie.Runtime}</h5>
+            <div className="various">
+              <div className="var-div">  
+                <h5>Genre:</h5><h5 className="h-var">{foundMovie.Genre}</h5>
+              </div>
+              <div className="var-div">
+                <h5>Release Date:</h5><h5 className="h-var">{foundMovie.Released}</h5>
+              </div>
+              <div className="var-div">
+                <h5>Runtime:</h5><h5 className="h-var">{foundMovie.Runtime}</h5>
+              </div>  
             </div>
             
              

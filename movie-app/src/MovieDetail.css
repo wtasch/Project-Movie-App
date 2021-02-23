@@ -52,8 +52,13 @@
     height: 15%;
     font-size: 70%;
     font-weight:400;
+}
+.var-div {
+    display:flex;
 }   
-
+.h-var {
+    margin-inline-start: 4px;
+}
 
 
 
