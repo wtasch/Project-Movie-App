@@ -1,15 +1,16 @@
 import React from 'react';
 //import { Route, Link, Switch } from 'react-router-dom';
-//import '../Articles.css'
+import '../Articles.css'
 
 
 const Articles = (props) => {
-    console.log(props)
+    console.log(props.news)
   return (
-    <div>
-      {props.news.map(news => <p>{news.title}</p>)}  
-      {props.news.map(news => <p>{news.author}</p>)}  
-    </div>
+      <div className="news-container">
+      <div className="article">
+      {props.news.map(news => <p className="newstext" >{news.title}<img className="imgNews" src={news.urlToImage}/></p>)}  
+          </div>
+   </div>
   )
 }
 export default Articles;
