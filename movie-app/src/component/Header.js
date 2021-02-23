@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import '../Header.css';
+import Articles from './Articles'
 
 
 const Header = (props) => {
@@ -9,11 +10,12 @@ const Header = (props) => {
   return (  
 <div>
     <header>
+      
   
       <nav>
         <img className="logoNav" src="https://i.imgur.com/zJg4M4I.png?1"></img>
         <Link className="headerLink" to="/">Home</Link>
-        <Link className="headerLink">News</Link>
+        <Link className="headerLink" to="/News">News</Link>
         <input className="search" type="text" placeholder="Search a Movie..."/>
         <Link className="headerLink" to="/">Movie List Page</Link>
         <Link className="headerLink" to="/Login">LogIn</Link>
