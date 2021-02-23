@@ -1,8 +1,6 @@
 
     footer {
- 
-    background-image: linear-gradient(to right, brown , yellow);      
-   
+    background-image: linear-gradient(to right, brown , yellow);     
     
 }
 
@@ -37,12 +35,4 @@
     width: 60%;
         }
 
-.logoFoot {
-position: relative;
-margin: 0;
-float: right;
-top: -45px;
-Left: 255px;
-
-        }
 
