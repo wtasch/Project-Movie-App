@@ -50,7 +50,7 @@ class Search extends Component {
               pathname:"./SearchResults",
               state: { title: this.state.title },
             }} 
-            />
+                        />
             : console.log("waiting for input")
           }
       </div>

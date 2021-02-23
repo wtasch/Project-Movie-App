@@ -1,17 +1,17 @@
+.footer-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
 
-    footer {
- 
-    background-image: linear-gradient(to right, brown , yellow);      
+}
    
+   
+   footer {
+    background-image: linear-gradient(to right, brown , yellow);     
     
 }
-.logoNav {
-    width: 30px;
-    height: 20px; 
-    margin-left: 5px;
-    margin-top:3px;;  
- 
-}
+
+
 
 .title3 {
     margin-left: auto;
@@ -21,11 +21,10 @@
     color: brown;
 }
 
-.title4 {
-   
+.title4 {   
     display: inline; 
-   font-size: 25px;
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
     }
 
@@ -43,4 +42,5 @@
     margin-right: auto;
     width: 60%;
         }
+
 

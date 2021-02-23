@@ -5,7 +5,7 @@ import '../Footer.css'
 
 const Footer = () => {
   return (
-    <div>
+    <div className="footer-container">
       <footer>
         <div>
             <div className="title3">
@@ -20,7 +20,7 @@ const Footer = () => {
               <a href="http://twitter.com/share?text=An%20Awesome%20Link&url=http://www.google.com">
                  Share This on Twitter</a>      
                  <div className="logoFoot">
-                   <img className="logoNav" src="https://i.imgur.com/zJg4M4I.png?1"></img>
+                  
                  </div>    
             </div>
           </div>
