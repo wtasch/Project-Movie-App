@@ -5,7 +5,7 @@ const MovieDetail = (props) => {
   const foundMovie = props.movieData.find(movie=>{
     return movie.Title===props.match.params.Title;
   });
-  console.log(foundMovie.Ratings);
+  console.log(foundMovie);
 
   return (
       <div className = "movie-detail">
@@ -18,7 +18,7 @@ const MovieDetail = (props) => {
               {foundMovie.Ratings.map((ratings, index) => 
                 <div key={index}>
                   <h5>{ratings.Source}:</h5>
-                  <h5>{ratings.Value}</h5>
+                  <h5 className="rating-value">{ratings.Value}</h5>
                 </div>
               )}
             </div>

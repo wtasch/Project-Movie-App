@@ -33,8 +33,9 @@
     font-size: 70%;
     font-weight:400; 
 }
-.ratings p {
-    padding: 0%;
+.rating-value {
+    text-align: right;
+    margin-inline-start: 4px;
 }
 .wrapper {
     display: flex;
