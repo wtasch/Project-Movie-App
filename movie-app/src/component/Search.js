@@ -40,7 +40,7 @@ class Search extends Component {
           <input
             type="submit"
             value="submit"
-          />
+          />          
         </form>
           { this.state.valid ? <Redirect 
             to={{
