@@ -31,7 +31,7 @@ class Search extends Component {
   render() {
     return (
       <div className="movieSearch">
-        <form onSubmit={this.searchConfirm}>
+        <form className="searchForm" onSubmit={this.searchConfirm}>
           <div id="searchBar">
             <input id="searchField"
               type="text"

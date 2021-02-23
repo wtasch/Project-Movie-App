@@ -1,9 +1,15 @@
 header {
     display: flex;
     flex-direction: row;   
-    background-image: linear-gradient(to right, brown , yellow);      
-   
-    
+    background-image: linear-gradient(to right, brown , yellow);
+    height: 140px;      
+}
+
+.headerBottomBorder {
+    height:3px;
+    width: 100%;
+    background-image: linear-gradient(to right, brown , yellow);
+
 }
 .logo {
     width: 130px;
@@ -14,54 +20,72 @@ header {
 }
 
 .logoNav {
-    width: 30px;
-    height: 20px; 
-    margin-left: 5px;
-    margin-top:3px;;  
- 
+    width: 130px;
+    height: 100px; 
+}
+
+.logoTitleHeader {
+    left: 0px;
+    height: fit-content;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
-    position: relative;
-    top: 50px;
-    left: 300px;
     display: inline;
     margin-left: 80px;
     
     color: brown;
 }
 
+.navTitle {
+
+}
+
 .title1 {
-    margin-top: 700px;
     display: inline; 
-   font-size: 25px;
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 200px;
+    color: brown;
+    position: relative;
+    bottom: 15px
     }
 
 .title2 {
-       
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: inline; 
     widows: 1px; 
     font-size: 35px;
-    margin-top: 700px;       
-        }
+    color: brown;
+    position: relative;
+    top: 5px
+}
 
 nav {
-    
-    background-color: #353b48;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
     position: fixed;
-    height: 37px;
-   
+    height: fit-content;
     width: 100%;
-     
+}
+
+.headerNav {
+    background-color: #2f3640;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .headerLink {
-    width: 50%;
+    width: fit-content;
     color: white;;
     text-align: center;
     padding: 14px 16px;
