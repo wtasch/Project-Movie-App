@@ -58,12 +58,10 @@
 }
 
 .newstitle {
-    position: relative;
+    width: auto;
     top: 10px;
-    left: 300px;
-    display: inline;
-    margin-left: 80px;
-    
+    justify-content: center;
+    display: inline;   
     color: brown;
 }
 
