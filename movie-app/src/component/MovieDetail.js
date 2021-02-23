@@ -6,6 +6,11 @@ const MovieDetail = (props) => {
     return movie.Title===props.match.params.Title;
   });
   console.log(foundMovie);
+
+  function addToWatchList (foundMovie) {
+    const watchList = [foundMovie];
+    console.log(watchList);
+  };
   
 
   return (
@@ -48,7 +53,7 @@ const MovieDetail = (props) => {
                 <h5>Runtime:</h5><h5 className="h-var">{foundMovie.Runtime}</h5>
               </div>
               <div className="plus-btn">
-                <button className="add-btn" >
+                <button className="add-btn" onClick={() => addToWatchList(foundMovie)}>
                   <div>Add to Watchlist</div>
                 </button>
               </div>   
