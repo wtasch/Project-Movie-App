@@ -15,16 +15,37 @@ class SearchResults extends Component {
     }
   }
 
-  componentDidMount= async (props) => {
+  // componentDidMount= async (props) => {
+  //   const movieSearch = this.props.location.state.title
+  //   const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
+
+  //   this.setState ({
+  //     searchTerm: movieSearch,
+  //     movieData: movieData1.data.Search,
+  //     apiDataLoaded: true
+  //   })
+  // }
+
+  componentDidUpdate= async (prevProps)=>{
+    
+    console.log(prevProps.location)
+    console.log(this.props.location)
+    if(this.props.location.state.title!==prevProps.location.state.title){
+    console.log("verified next piece")
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
-
     this.setState ({
       searchTerm: movieSearch,
       movieData: movieData1.data.Search,
       apiDataLoaded: true
-    })
+      })
+    }
   }
+    
+    
+
+
+
 
   render() {
     return (
@@ -42,7 +63,7 @@ class SearchResults extends Component {
               }}>
                 <img src={movie.Poster} alt={`${movie.Title} Poster`} />
             </Link>
-            {console.log(movie.imdbID)}
+            {/* {console.log(movie.imdbID)} */}
           </div>
           <Link 
               to={{

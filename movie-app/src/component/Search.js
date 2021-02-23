@@ -14,12 +14,13 @@ class Search extends Component {
 
   searchConfirm = (e) => {
     e.preventDefault()
-    this.setState({
-      valid: true
-    })
+    this.setState(prevState=>({
+      valid:!prevState.valid
+    }));
   }
 
   handleChange = (evt) => {
+    console.log(this.props)
     console.log(evt.target.value);
     this.setState({
       [evt.target.name]: evt.target.value
@@ -28,7 +29,9 @@ class Search extends Component {
   }
 
 
+
   render() {
+    console.log(this.state.valid)
     return (
       <div className="movieSearch">
         <form onSubmit={this.searchConfirm}>
