@@ -20,6 +20,7 @@ class Search extends Component {
   }
 
   handleChange = (evt) => {
+    console.log(evt.target.value);
     this.setState({
       [evt.target.name]: evt.target.value
     })
@@ -31,24 +32,26 @@ class Search extends Component {
     return (
       <div className="movieSearch">
         <form onSubmit={this.searchConfirm}>
-          <input
-            type="text"
-            name="title"
-            placeholder="search"
-            onChange={this.handleChange}
-          />
-          <input
-            type="submit"
-            value="submit"
-          />
+          <div id="searchBar">
+            <input id="searchField"
+              type="text"
+              name="title"
+              placeholder="Search..."
+              onChange={this.handleChange}
+            />
+            <input id="searchButton"
+              type="submit"
+              value=""
+            />
+          </div>          
         </form>
           { this.state.valid ? <Redirect 
             to={{
               pathname:"./SearchResults",
               state: { title: this.state.title },
             }} 
-            />
-            : <h3>data not loaded search</h3>
+                        />
+            : console.log("waiting for input")
           }
       </div>
     )
