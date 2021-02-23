@@ -26,8 +26,8 @@ const MovieDetail = (props) => {
               <div className="poster">
                 <img src={foundMovie.Poster} alt="movie poster" />
               </div>
-              <div className="plot">  
-                <h3 className="summary">{foundMovie.Plot}</h3>
+              <div className="plot-summary">  
+                <h3 className="plot">{foundMovie.Plot}</h3>
             
                 <h3>Actors/Cast</h3>
                 <p>{foundMovie.Actors}</p>

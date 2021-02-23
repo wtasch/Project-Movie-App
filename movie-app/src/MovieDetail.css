@@ -44,14 +44,17 @@
     display: flex;
     color: #fff;
 }
-.summary {
+.plot {
     font-weight: 400;
     font-size: 95%;
     letter-spacing: 1px;
     word-spacing: 2px;
 }
-.plot p {
+.plot-summary p {
     font-size: 95%;
+}
+.plot-summary h3 {
+    font-weight: 400;
 }
 .various {
     display: flex;
