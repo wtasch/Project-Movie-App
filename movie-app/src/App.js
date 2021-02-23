@@ -9,8 +9,9 @@ import {Route, Link, Switch} from 'react-router-dom';
 import Login from './component/Login'
 import Search from './component/Search';
 import SearchResults from './component/SearchResults';
-import Register from './component/Register'
-import Articles from './component/Articles'
+import Register from './component/Register';
+import SearchDetail from './component/SearchDetail';
+import Articles from './component/Articles';
 
 //api key 38e29c7e
 
@@ -75,6 +76,10 @@ class App extends Component{
           <Route path="/MovieDetail/:Title" render={(routerProps)=>(        
           <MovieDetail movieData={this.state.movieData} {...routerProps} />
           )}/>
+
+          <Route path="/SearchDetail" render={(routerProps) => (
+            <SearchDetail {...routerProps} />
+          )} />
 
           <Route exact path="/Login" render={(routerProps)=>(        
           <Login {...routerProps}/>
