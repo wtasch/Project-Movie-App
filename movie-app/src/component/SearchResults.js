@@ -29,7 +29,7 @@ class SearchResults extends Component {
       <div>
         {this.state.apiDataLoaded ? 
         <div className="resultsList">
-          <h1>{`search results for ${this.state.movieSearch}...`}</h1>
+          <h1>{`search results for ${this.props.location.state.title}...`}</h1>
           {this.state.movieData.map(movie => (
             <div key={movie.imdbID} className="resultsCard">
           <div className="resultsCardImageContainer">
