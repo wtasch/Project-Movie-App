@@ -56,7 +56,7 @@ class Search extends Component {
             />
           </div>          
         </form>
-        {console.log(this.state.valid)}
+        {/* {console.log(this.state.valid)} */}
           { this.state.valid ? <Redirect 
             to={{
               pathname:"./SearchResults",

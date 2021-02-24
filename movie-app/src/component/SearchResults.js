@@ -33,11 +33,11 @@ class SearchResults extends Component {
   //component did Update handles all subsequent searches after initial search
   componentDidUpdate= async (prevProps)=>{
     
-    console.log(prevProps.location)
-    console.log(this.props.location)
+    // console.log(prevProps.location)
+    // console.log(this.props.location)
     if(this.props.location.state.title!==prevProps.location.state.title){
       
-    console.log("component did update ran!")
+    // console.log("component did update ran!")
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
     this.setState ({
@@ -50,7 +50,7 @@ class SearchResults extends Component {
        
 
   render() {
-    console.log("search results ran!")
+    // console.log("search results ran!")
     return (
       <div>
         {this.state.apiDataLoaded ? 
