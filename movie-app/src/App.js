@@ -100,7 +100,7 @@ class App extends Component{
           )}/>
 
           <Route path="/WatchList" render={(routerProps) => (
-            <SearchDetail watchList={this.state.watchList}  {...routerProps} />
+            <WatchList watchList={this.state.watchList}  {...routerProps} />
           )}/>  
 
           <Articles news={this.state.news} />

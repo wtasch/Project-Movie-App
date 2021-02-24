@@ -48,10 +48,13 @@ const MovieDetail =(props) => {
                 <div className="var-div">
                   <h5>Runtime:</h5><h5 className="h-var">{foundMovie.Runtime}</h5>
                 </div>
-                <div className="plus-btn">
+                <div className="var-div">
                   <button className="add-btn" onClick={() => props.addToWatchList(foundMovie)}>
                     <div>Add to Watchlist</div>
                   </button>
+                </div>
+                <div className="var-div">
+                  <Link to="/WatchList">Watch List Page</Link>
                 </div>   
               </div>
             </div>  
