@@ -12,6 +12,7 @@ import SearchResults from './component/SearchResults';
 import Register from './component/Register';
 import SearchDetail from './component/SearchDetail';
 import Articles from './component/Articles';
+import WatchList from './component/WatchList';
 
 //api key 38e29c7e
 
@@ -97,6 +98,10 @@ class App extends Component{
           <Route exact path="/SearchResults" render={(routerProps) => (
             <SearchResults {...routerProps}/>
           )}/>
+
+          <Route path="/WatchList" render={(routerProps) => (
+            <SearchDetail watchList={this.state.watchList}  {...routerProps} />
+          )}/>  
 
           <Articles news={this.state.news} />
         
