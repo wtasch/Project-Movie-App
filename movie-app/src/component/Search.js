@@ -12,23 +12,34 @@ class Search extends Component {
     }
   }
 
+//The valid indicator is used to confirm if a search was executed.  
+//Once true, the logic in the render function will Re-direct to search results
+
   searchConfirm = (e) => {
     e.preventDefault()
-    this.setState({
-      valid: true
-    })
+    this.setState(prevState=>({
+      valid:true     
+    }));
   }
+
+
 
   handleChange = (evt) => {
+    console.log(this.props)
     console.log(evt.target.value);
     this.setState({
-      [evt.target.name]: evt.target.value
-    })
+      [evt.target.name]: evt.target.value,
+      valid:false   //added this logic to prevent trying to render on
+                    // every character entry in the search box.  the serch
+    })              //needs to be submitted by pressing enter, which then invokes
+                    //the searchConfirm method.
 
   }
+
 
 
   render() {
+    console.log(this.state.valid)
     return (
       <div className="movieSearch">
         <form className="searchForm" onSubmit={this.searchConfirm}>
@@ -45,10 +56,11 @@ class Search extends Component {
             />
           </div>          
         </form>
+        {/* {console.log(this.state.valid)} */}
           { this.state.valid ? <Redirect 
             to={{
               pathname:"./SearchResults",
-              state: { title: this.state.title },
+              state: { title: this.state.title},
             }} 
                         />
             : console.log("waiting for input")
