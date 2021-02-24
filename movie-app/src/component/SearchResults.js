@@ -15,6 +15,9 @@ class SearchResults extends Component {
     }
   }
 
+
+  //componentDidMount is needed to handle the first search
+  //in the search bar
   componentDidMount= async (props) => {
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
@@ -26,6 +29,8 @@ class SearchResults extends Component {
     })
   }
 
+
+  //component did Update handles all subsequent searches after initial search
   componentDidUpdate= async (prevProps)=>{
     
     console.log(prevProps.location)
