@@ -21,6 +21,7 @@ class App extends Component{
     this.state={
       movieData:[],
       news: [],
+      watchList: [],
       apiDataLoaded: false
     }
   }
@@ -48,7 +49,15 @@ class App extends Component{
       apiDataLoaded: true
     })
   }
-  
+  addToWatchList = (foundMovie) => {
+    const addMovieToList = this.state.watchList;
+    addMovieToList.push(foundMovie);
+    console.log(addMovieToList);
+    this.setState({
+      watchList: addMovieToList
+    })
+    console.log(this.state.watchList);
+  };  
 
   render(){
     console.log(this.state.movieData.Title)
@@ -74,7 +83,7 @@ class App extends Component{
           )}/>
 
           <Route path="/MovieDetail/:Title" render={(routerProps)=>(        
-          <MovieDetail movieData={this.state.movieData} {...routerProps} />
+          <MovieDetail movieData={this.state.movieData} addToWatchList={this.addToWatchList} {...routerProps} />
           )}/>
 
           <Route path="/SearchDetail" render={(routerProps) => (
