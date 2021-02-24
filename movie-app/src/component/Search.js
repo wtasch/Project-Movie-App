@@ -42,7 +42,7 @@ class Search extends Component {
     console.log(this.state.valid)
     return (
       <div className="movieSearch">
-        <form onSubmit={this.searchConfirm}>
+        <form className="searchForm" onSubmit={this.searchConfirm}>
           <div id="searchBar">
             <input id="searchField"
               type="text"

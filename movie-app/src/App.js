@@ -60,7 +60,7 @@ class App extends Component{
         <div className="App">
         <Header  movieData={this.state.movieData} />
 
-        <Search />
+
         
 
           
