@@ -14,10 +14,10 @@ class SearchDetail extends Component {
 
   componentDidMount = async(props) => {
     const titleData = this.props.location.state.titledata
-    console.log(titleData)
+    // console.log(titleData)
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&i=${titleData}`)
 
-    console.log(movieData1.data)
+    // console.log(movieData1.data)
 
     this.setState ({
       movieData: movieData1.data,
@@ -25,8 +25,11 @@ class SearchDetail extends Component {
     })
   }
 
+
+
+
   render() {
-    console.log("look at this!!!")
+    // console.log("look at this!!!")
     return (
         <div className = "movie-detail">
           {this.state.apiDataLoaded ? (
