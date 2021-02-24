@@ -15,16 +15,16 @@ class SearchResults extends Component {
     }
   }
 
-  // componentDidMount= async (props) => {
-  //   const movieSearch = this.props.location.state.title
-  //   const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
+  componentDidMount= async (props) => {
+    const movieSearch = this.props.location.state.title
+    const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
 
-  //   this.setState ({
-  //     searchTerm: movieSearch,
-  //     movieData: movieData1.data.Search,
-  //     apiDataLoaded: true
-  //   })
-  // }
+    this.setState ({
+      searchTerm: movieSearch,
+      movieData: movieData1.data.Search,
+      apiDataLoaded: true
+    })
+  }
 
   componentDidUpdate= async (prevProps)=>{
     

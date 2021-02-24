@@ -8,7 +8,7 @@ class Search extends Component {
 
     this.state = {
       title:'',
-      valid: false
+      valid: true
     }
   }
 
@@ -23,7 +23,8 @@ class Search extends Component {
     console.log(this.props)
     console.log(evt.target.value);
     this.setState({
-      [evt.target.name]: evt.target.value
+      [evt.target.name]: evt.target.value,
+      valid:false
     })
 
   }
@@ -53,7 +54,7 @@ class Search extends Component {
             to={{
               pathname:"./SearchResults",
               state: { title: this.state.title, 
-                valid:this.state.valid },
+                valid:!this.state.valid },
             }} 
                         />
             : console.log("waiting for input")
