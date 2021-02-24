@@ -31,7 +31,8 @@ class SearchResults extends Component {
     console.log(prevProps.location)
     console.log(this.props.location)
     if(this.props.location.state.title!==prevProps.location.state.title){
-    console.log("verified next piece")
+      
+    console.log("component did update ran!")
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
     this.setState ({
@@ -41,13 +42,10 @@ class SearchResults extends Component {
       })
     }
   }
-    
-    
-
-
-
+       
 
   render() {
+    console.log("search results ran!")
     return (
       <div>
         {this.state.apiDataLoaded ? 

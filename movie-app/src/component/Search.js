@@ -48,10 +48,12 @@ class Search extends Component {
             />
           </div>          
         </form>
+        {console.log(this.state.valid)}
           { this.state.valid ? <Redirect 
             to={{
               pathname:"./SearchResults",
-              state: { title: this.state.title },
+              state: { title: this.state.title, 
+                valid:this.state.valid },
             }} 
                         />
             : console.log("waiting for input")
