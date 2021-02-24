@@ -1,12 +1,15 @@
 /*css for MovieDetail component */
-.movie-detail {
-    
+.movie-detail-container {
     background-color: #1e272e;
+    box-sizing: border-box;
     color: #555;
     font-family: 'Lato', 'Arial', 'sans-serif';
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+}
+.movie-detail {
+    border: solid 2px #718093;
     margin: auto 5%;
 }
 .name-title {
@@ -33,26 +36,51 @@
     font-size: 70%;
     font-weight:400; 
 }
-.ratings p {
-    padding: 0%;
+.rating-value {
+    text-align: right;
+    margin-inline-start: 4px;
 }
-.wrapper {
+.detail-wrapper {
     display: flex;
     color: #fff;
 }
-
+.plot {
+    font-weight: 400;
+    font-size: 95%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.plot-summary p {
+    font-size: 95%;
+}
+.plot-summary h3 {
+    font-weight: 400;
+}
 .various {
     display: flex;
     justify-content: space-evenly;
     background-color: #485460;
     color: #fff;
     margin-top: 0;
-    width: 60%;
+    width: 75%;
     height: 15%;
     font-size: 70%;
     font-weight:400;
+}
+.var-div {
+    display:flex;
 }   
-
+.h-var {
+    margin-inline-start: 4px;
+}
+.plus-btn {
+    position: relative;
+}
+.add-btn {
+    position: absolute;
+    top:25%;
+    left:10%;  
+}
 
 
 
