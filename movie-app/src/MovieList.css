@@ -4,10 +4,7 @@
   padding: 0px 50px 0px 50px;
   background-color: #353b48;
   justify-content: center;
-}
-
-.movieSearch {
-  width: 100%;
+  margin: 0px 0px 100px 0px;
 }
 
 .movieList h1 {
@@ -23,6 +20,19 @@
   flex-direction: column;
   margin: 25px;
   border: solid 2px #718093;
+
+}
+
+.movieCard:hover {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 25px;
+  border: solid 4px #718093;
+  
 
 }
 

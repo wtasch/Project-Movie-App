@@ -63,13 +63,14 @@ class App extends Component{
   render(){
     console.log(this.state.movieData.Title)
     console.log(this.state.news)
+    console.log(this.props)
   return (
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
         <Header  movieData={this.state.movieData} />
 
-        <Search />
+
         
 
           
