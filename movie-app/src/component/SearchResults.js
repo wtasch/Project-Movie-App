@@ -11,7 +11,8 @@ class SearchResults extends Component {
       searchTerm: "",
       movieData:[],
       apiDataLoaded: false,
-      titledata: []
+      titledata: [],
+      searchResponse:false
     }
   }
 
@@ -21,12 +22,26 @@ class SearchResults extends Component {
   componentDidMount= async (props) => {
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
-
-    this.setState ({
+    const resultsString=movieData1.data.Response;
+    console.log(movieData1)
+   
+    if(resultsString==="False"){
+  
+     this.setState ({
       searchTerm: movieSearch,
       movieData: movieData1.data.Search,
-      apiDataLoaded: true
+      apiDataLoaded: true,
+      searchResponse:false
     })
+  }
+    else {this.setState ({
+      searchTerm: movieSearch,
+      movieData: movieData1.data.Search,
+      apiDataLoaded: true,
+      searchResponse:true
+    })
+    }
+
   }
 
 
@@ -40,51 +55,77 @@ class SearchResults extends Component {
     // console.log("component did update ran!")
     const movieSearch = this.props.location.state.title
     const movieData1 = await axios.get(`http://www.omdbapi.com/?apikey=38e29c7e&s=${movieSearch}`)
-    this.setState ({
-      searchTerm: movieSearch,
-      movieData: movieData1.data.Search,
-      apiDataLoaded: true
-      })
-    }
-  }
+    const resultsString=movieData1.data.Response;
+    console.log(movieData1.data.Response)
+
+    if(resultsString==="False"){
+  
+      this.setState ({
+       searchTerm: movieSearch,
+       movieData: movieData1.data.Search,
+       apiDataLoaded: true,
+       searchResponse:false
+     })
+   }
+     else {this.setState ({
+       searchTerm: movieSearch,
+       movieData: movieData1.data.Search,
+       apiDataLoaded: true,
+       searchResponse:true
+           })
+        }
+ 
+     }
+ 
+   }
+  
        
 
   render() {
-    // console.log("search results ran!")
+    // console.log(this.state.movieData)
+    console.log(this.state.searchResponse)
+  
     return (
       <div>
-        {this.state.apiDataLoaded ? 
-        <div className="resultsList">
-          <h1>{`search results for "${this.state.searchTerm}"...`}</h1>
-          {this.state.movieData.map(movie => (
-            <div key={movie.imdbID} className="resultsCard">
-          <div className="resultsCardImageContainer">
-            <Link 
-              to={{
-                pathname: `/SearchDetail/`,
-                state: { titledata: movie.imdbID },
-              }}>
-                <img src={movie.Poster} alt={`${movie.Title} Poster`} />
-            </Link>
-            {/* {console.log(movie.imdbID)} */}
-          </div>
-          <Link 
-              to={{
-                pathname: `/SearchDetail/`,
-                state: { titledata: movie.imdbID },
-              }}>
-              <div className="resultsCardTitle">
-                {movie.Title}
+            <div>
+              {this.state.searchResponse ? 
+              <div className="resultsList">
+                <h1>{`search results for "${this.state.searchTerm}"...`}</h1>
+                {this.state.movieData.map(movie => (
+                  <div key={movie.imdbID} className="resultsCard">
+                <div className="resultsCardImageContainer">
+                  <Link 
+                    to={{
+                      pathname: `/SearchDetail/`,
+                      state: { titledata: movie.imdbID },
+                    }}>
+                      <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+                  </Link>
+                  {/* {console.log(movie.imdbID)} */}
+                </div>
+                <Link 
+                    to={{
+                      pathname: `/SearchDetail/`,
+                      state: { titledata: movie.imdbID },
+                    }}>
+                    <div className="resultsCardTitle">
+                      {movie.Title}
+                    </div>
+                </Link>
               </div>
-          </Link>
-        </div>
-          ))}
-        </div>
-        :
-        <h3>data not loaded</h3>
-        }
-      </div>
-    )
+                ))}
+              </div>
+              :
+              <h3>data not loaded</h3>
+              }
+            </div>
+      </div>         
+  
+
+          )
+
+
+
   }
 
 }
