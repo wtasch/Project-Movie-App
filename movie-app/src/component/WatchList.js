@@ -20,7 +20,7 @@ const WatchList = (props) => {
                 
                 </div>
                 
-                <div className="movieCardTitle">
+                <div className="movie-name">
                     {movie.Title}
                 </div>
                 
