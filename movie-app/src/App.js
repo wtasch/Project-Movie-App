@@ -53,11 +53,10 @@ class App extends Component{
   addToWatchList = (foundMovie) => {
     const addMovieToList = this.state.watchList;
     addMovieToList.push(foundMovie);
-    console.log(addMovieToList);
+    
     this.setState({
       watchList: addMovieToList
     })
-    console.log(this.state.watchList);
   };  
 
   render(){
