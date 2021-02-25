@@ -4,7 +4,7 @@ import '../Articles.css'
 
 
 const Articles = (props) => {
-    console.log(props.news)
+
   return (
       <div className="news-container">
 

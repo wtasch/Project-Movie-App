@@ -35,6 +35,7 @@ class App extends Component{
     const movieData5=await axios.get("http://www.omdbapi.com/?apikey=38e29c7e&t=caddyshack")
     const news = await axios.get("https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=e444bb227c874f1f850afa4ab753e1fc");
     
+    
     const movieData = [
       movieData1.data,
       movieData2.data,
@@ -43,8 +44,7 @@ class App extends Component{
       movieData5.data,
     ];
 
-    //console.log(news.data.articles);
-    this.setState ({
+        this.setState ({
       movieData: movieData,
       news: news.data.articles,
       apiDataLoaded: true
@@ -67,12 +67,7 @@ class App extends Component{
     <div>
       {this.state.apiDataLoaded ?  
         <div className="App">
-        <Header  movieData={this.state.movieData} />
-
-
-        
-
-          
+        <Header  movieData={this.state.movieData} />     
        
 
           {/* The line below is for testing purposes.  The links for each detail page will be created in the list page*/}
