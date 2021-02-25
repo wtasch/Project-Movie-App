@@ -6,8 +6,7 @@ const MovieDetail =(props) => {
   const foundMovie = props.movieData.find(movie=>{
     return movie.Title === props.match.params.Title;
   });
-  console.log(foundMovie);
-        
+         
     
     return (
         <div className = "movie-detail-container">
